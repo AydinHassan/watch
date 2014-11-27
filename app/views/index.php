@@ -35,7 +35,7 @@
 
                     <form id="addForm" name="videoForm" class="text-center" ng-submit="submitVideo()" novalidate ng-show="showAddForm">
                         <div class="form-group has-feedback" ng-class="{ 'has-error': videoForm.youtube_id.$invalid && !videoForm.youtube_id.$pristine, 'has-success': videoForm.youtube_id.$valid && !videoForm.youtube_id.$pristine }">
-                            <input ng-model="videoData.youtube_id" type="text" class="form-control" name="youtube_id" id="youtube_id" placeholder="Youtube Link or ID" required ng-pattern="/^[a-zA-Z0-9_-]{11}|^(http|https):\/\/www.youtube.com\/watch\?v=[a-zA-Z0-9_-]{11}/" aria-describedby="youtube_idStatus">
+                            <input ng-model="videoData.youtube_id" type="text" class="form-control" name="youtube_id" id="youtube_id" placeholder="Youtube Link or ID" required ng-pattern="/^[a-zA-Z0-9_-]{11}|^(http|https):\/\/www.youtube.com\/watch\?v=[a-zA-Z0-9_-]{11}/" aria-describedby="youtube_idStatus" youtube-link-validator>
                             <span ng-show="videoForm.youtube_id.$invalid && !videoForm.youtube_id.$pristine" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
                             <span ng-show="videoForm.youtube_id.$valid && !videoForm.youtube_id.$pristine" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
                         </div>
